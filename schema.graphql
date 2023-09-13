@@ -1,0 +1,28 @@
+type Query {
+  getPosts(id:String, page: Int, limit: Int): [Post] 
+  getNotifications: [Notification]
+}
+type Mutation {
+  posts(user_id: Int, user_to:Int text:String): Boolean
+  signupBase64( encode_file:String): Boolean
+}
+type Subscription {
+  updateNotifications(page: Int, limit: Int): Notification
+}
+
+type Notification{
+    avatar: String
+    content_id: String
+    created: String
+    id: ID
+    message: String    
+    type_action: String
+    seen: Boolean
+}
+
+type Post{
+  userto: Int
+  user_id: Int
+  text: String
+  likes: [Int]
+}
