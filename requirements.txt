@@ -1,0 +1,7 @@
+ariadne
+broadcaster
+websockets
+asyncio_redis
+uvicorn
+starlette
+python-multipart
